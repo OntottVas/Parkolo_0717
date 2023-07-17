@@ -5,24 +5,22 @@ public class Main {
     public static void main(String[] args) {
         ParkingLot newParkingLot = new ParkingLot(10);
 
-        List<Parkable> parkingSpaces = newParkingLot.createParkingLot();
-
-        newParkingLot.parking(parkingSpaces, new Car("black", 4));
-        newParkingLot.parking(parkingSpaces, new Car("black", 4));
-        newParkingLot.parking(parkingSpaces, new Car("black", 4));
-        newParkingLot.parking(parkingSpaces, new Car("black", 4));
-        newParkingLot.parking(parkingSpaces, new Car("black", 4));
-        newParkingLot.parking(parkingSpaces, new Car("black", 4));
-        newParkingLot.parking(parkingSpaces, new Lorry("brown", 2));
-        newParkingLot.parking(parkingSpaces, new Lorry("brown", 2));
-        newParkingLot.parking(parkingSpaces, new Lorry("brown", 2));
-        newParkingLot.parking(parkingSpaces, new Lorry("brown", 2));
-        newParkingLot.parking(parkingSpaces, new Lorry("brown", 2));
-        newParkingLot.parking(parkingSpaces, new Lorry("brown", 2));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Car("black", 4));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Car("black", 4));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Car("black", 4));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Car("black", 4));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Car("black", 4));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Car("black", 4));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Lorry("brown", 2));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Lorry("brown", 2));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Lorry("brown", 2));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Lorry("brown", 2));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Lorry("brown", 2));
+        newParkingLot.parking(newParkingLot.getParkingLot(), new Lorry("brown", 2));
 
         System.out.println();
 
-        for (Parkable actual : parkingSpaces) {
+        for (Parkable actual : newParkingLot.getParkingLot()) {
             System.out.println(actual);
         }
 
@@ -30,7 +28,7 @@ public class Main {
 
         System.out.println("Occupied spaces: " + newParkingLot.getCounter());
 
-        newParkingLot.leaving(parkingSpaces,1);
+        newParkingLot.leaving(newParkingLot.getParkingLot(),1);
 
         System.out.println();
 
@@ -38,7 +36,7 @@ public class Main {
 
         System.out.println();
 
-        for (Parkable actual : parkingSpaces) {
+        for (Parkable actual : newParkingLot.getParkingLot()) {
             System.out.println(actual);
         }
     }

@@ -4,13 +4,23 @@ import java.util.List;
 public class ParkingLot {
     private int counter = 0;
     private int size;
+    private List<Parkable> parkingLot;
 
     public ParkingLot(int size) {
         this.size = size;
+        this.parkingLot = new ArrayList<>();
     }
 
-    public List<Parkable> createParkingLot() {
-        return new ArrayList<>();
+    public List<Parkable> getParkingLot() {
+        return this.parkingLot;
+    }
+
+    public int getSize() {
+        return this.size;
+    }
+
+    public int getCounter() {
+        return this.counter;
     }
 
     public void parking(List<Parkable> parkingLot, Car forParking) {
@@ -45,11 +55,5 @@ public class ParkingLot {
         }
     }
 
-    public int getSize() {
-        return this.size;
-    }
 
-    public int getCounter() {
-        return this.counter;
-    }
 }
